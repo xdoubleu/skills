@@ -19,7 +19,7 @@ sh "${CLAUDE_PLUGIN_ROOT}/scripts/setup-statusline.sh"
 
 If `${CLAUDE_PLUGIN_ROOT}` isn't set in this context, locate `setup-statusline.sh` under this
 plugin's installed directory (typically
-`~/.claude/plugins/marketplaces/xdoubleu-claude-plugins/plugins/session-hygiene/scripts/setup-statusline.sh`)
+`~/.claude/plugins/marketplaces/xdoubleu-skills/plugins/session-hygiene/scripts/setup-statusline.sh`)
 and run it directly instead.
 
 ## Notes

@@ -1,23 +1,42 @@
-# xdoubleu-claude-plugins
+# xdoubleu/skills
 
-xdoubleu's personal Claude Code plugin marketplace: generic skills/hooks
-that aren't tied to any one project, so they can be installed once and
-reused across repos instead of being copy-pasted (and drifting) into each
-project's own `.claude/skills/`.
+xdoubleu's personal agent-skills marketplace: generic skills/hooks that
+aren't tied to any one project, so they can be installed once and reused
+across repos instead of being copy-pasted (and drifting) into each
+project's own skills directory. Consumed as a Claude Code plugin
+marketplace, and as a plain skills source by any other agent through the
+[skills CLI](https://skills.sh).
 
 ## Install
 
+### Claude Code (plugins: skills + hooks + commands)
+
 ```
-/plugin marketplace add xdoubleu/xdoubleu-claude-plugins
-/plugin install git-task-flow@xdoubleu-claude-plugins
-/plugin install session-retro@xdoubleu-claude-plugins
-/plugin install git-cleanup@xdoubleu-claude-plugins
-/plugin install github-issue-triage@xdoubleu-claude-plugins
-/plugin install skill-lifecycle@xdoubleu-claude-plugins
-/plugin install session-hygiene@xdoubleu-claude-plugins
+/plugin marketplace add xdoubleu/skills
+/plugin install git-task-flow@xdoubleu-skills
+/plugin install session-retro@xdoubleu-skills
+/plugin install git-cleanup@xdoubleu-skills
+/plugin install github-issue-triage@xdoubleu-skills
+/plugin install skill-lifecycle@xdoubleu-skills
+/plugin install session-hygiene@xdoubleu-skills
 ```
 
-Maintain a persistent local clone at `~/github/claude-plugins` for editing
+### Any other agent (skills only, via the skills CLI)
+
+The skills CLI reads this repo's `.claude-plugin/marketplace.json` to
+discover the plugin skills — no separate packaging needed. Install to the
+agents you use (e.g. OpenCode reads the resulting `.agents/skills/`), then
+keep them fresh with `npx skills update`:
+
+```
+npx skills add xdoubleu/skills -a opencode --skill ship-pr --skill task-worktree \
+  --skill refine-issue --skill issue-triage --skill session-retro
+```
+
+Hooks and commands are Claude Code plugin mechanics; other agents get the
+skills only and wire their own enforcement (e.g. OpenCode plugins).
+
+Maintain a persistent local clone at `~/github/skills` for editing
 this repo — see `plugins/skill-lifecycle`.
 
 ## Plugins
