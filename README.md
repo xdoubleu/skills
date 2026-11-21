@@ -19,6 +19,7 @@ marketplace, and as a plain skills source by any other agent through the
 /plugin install github-issue-triage@xdoubleu-skills
 /plugin install skill-lifecycle@xdoubleu-skills
 /plugin install session-hygiene@xdoubleu-skills
+/plugin install doc-budgets@xdoubleu-skills
 ```
 
 ### Any other agent (skills only, via the skills CLI)
@@ -94,3 +95,6 @@ auto-merge rules onto `ship-pr`) should keep a thin local skill in its own
 adds only the project-specific parts — not a full copy of the generic
 mechanics. Use `skill-lifecycle`'s `skill-placement-review` skill to decide
 this each time a skill is created or edited, anywhere.
+- **doc-budgets** — per-file line budgets and a dead-path check for docs,
+  configured by `.claude/doc-budgets.json`; `PostToolUse` hook, OpenCode port
+  and CI scripts (tag `doc-budgets-vX.Y.Z`). See `plugins/doc-budgets/README.md`.
