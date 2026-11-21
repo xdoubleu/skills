@@ -86,6 +86,9 @@ this repo — see `plugins/skill-lifecycle`.
   manual wiring needed for those.
 
 ## Project-specific wrappers
+- **doc-budgets** — per-file line budgets and a dead-path check for docs,
+  configured by `.claude/doc-budgets.json`; `PostToolUse` hook, OpenCode port
+  and CI scripts (tag `doc-budgets-vX.Y.Z`). See `plugins/doc-budgets/README.md`.
 
 A project that wants extra project-specific behavior on top of these
 (e.g. this user's `tools.xdoubleu.com` repo, which layers its own tracking-
@@ -95,6 +98,3 @@ auto-merge rules onto `ship-pr`) should keep a thin local skill in its own
 adds only the project-specific parts — not a full copy of the generic
 mechanics. Use `skill-lifecycle`'s `skill-placement-review` skill to decide
 this each time a skill is created or edited, anywhere.
-- **doc-budgets** — per-file line budgets and a dead-path check for docs,
-  configured by `.claude/doc-budgets.json`; `PostToolUse` hook, OpenCode port
-  and CI scripts (tag `doc-budgets-vX.Y.Z`). See `plugins/doc-budgets/README.md`.
