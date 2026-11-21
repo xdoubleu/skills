@@ -19,6 +19,7 @@ marketplace, and as a plain skills source by any other agent through the
 /plugin install github-issue-triage@xdoubleu-skills
 /plugin install skill-lifecycle@xdoubleu-skills
 /plugin install session-hygiene@xdoubleu-skills
+/plugin install task-lifecycle@xdoubleu-skills
 ```
 
 ### Any other agent (skills only, via the skills CLI)
@@ -83,6 +84,11 @@ this repo — see `plugins/skill-lifecycle`.
   (kept in sync by your own dotfiles install step). The hooks themselves
   (`hooks/hooks.json`) work automatically once the plugin is installed — no
   manual wiring needed for those.
+
+- **task-lifecycle** — `start-task`, `finish-task`, `refine-task`, `refine-feature` for
+  factory-board tasks. Fully config-driven via `.claude/repo.config.json`
+  (gates per area, board tool names, labels, PR wait command); schema in
+  `plugins/task-lifecycle/README.md`. Runs offline under `FACTORY_JOB`.
 
 ## Project-specific wrappers
 

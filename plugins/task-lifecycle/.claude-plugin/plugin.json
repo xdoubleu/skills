@@ -1,0 +1,7 @@
+{
+  "name": "task-lifecycle",
+  "description": "Config-driven task lifecycle for repos whose tasks live on the factory board: start-task, finish-task, refine-task, refine-feature. Every repo specific comes from .claude/repo.config.json.",
+  "author": {
+    "name": "xdoubleu"
+  }
+}
