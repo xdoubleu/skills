@@ -20,6 +20,7 @@ marketplace, and as a plain skills source by any other agent through the
 /plugin install skill-lifecycle@xdoubleu-skills
 /plugin install session-hygiene@xdoubleu-skills
 /plugin install doc-budgets@xdoubleu-skills
+/plugin install task-lifecycle@xdoubleu-skills
 ```
 
 ### Any other agent (skills only, via the skills CLI)
@@ -85,11 +86,16 @@ this repo — see `plugins/skill-lifecycle`.
   (`hooks/hooks.json`) work automatically once the plugin is installed — no
   manual wiring needed for those.
 
-## Project-specific wrappers
+- **task-lifecycle** — `start-task`, `finish-task`, `refine-task`, `refine-feature` for
+  factory-board tasks. Fully config-driven via `.claude/repo.config.json`
+  (gates per area, board tool names, labels, PR wait command); schema in
+  `plugins/task-lifecycle/README.md`. Runs offline under `FACTORY_JOB`.
+
 - **doc-budgets** — per-file line budgets and a dead-path check for docs,
   configured by `.claude/doc-budgets.json`; `PostToolUse` hook, OpenCode port
   and CI scripts (tag `doc-budgets-vX.Y.Z`). See `plugins/doc-budgets/README.md`.
 
+## Project-specific wrappers
 A project that wants extra project-specific behavior on top of these
 (e.g. this user's `tools.xdoubleu.com` repo, which layers its own tracking-
 issue creation onto `task-worktree`, and its own lint/coverage/build/

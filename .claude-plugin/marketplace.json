@@ -47,6 +47,12 @@
       "description": "Doc-budget check: per-file line budgets and a dead-path check for docs, config-driven via .claude/doc-budgets.json, as an edit hook, an OpenCode port and CI-runnable scripts.",
       "source": "./plugins/doc-budgets",
       "category": "workflow"
+    },
+    {
+      "name": "task-lifecycle",
+      "description": "Config-driven start-task, finish-task, refine-task and refine-feature for repos whose tasks live on the factory board; every repo specific comes from .claude/repo.config.json.",
+      "source": "./plugins/task-lifecycle",
+      "category": "workflow"
     }
   ]
 }
