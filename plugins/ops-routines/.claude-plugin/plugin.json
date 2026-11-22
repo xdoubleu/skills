@@ -1,0 +1,7 @@
+{
+  "name": "ops-routines",
+  "description": "Config-driven ops routine skills: sentry-triage, dependabot-triage, monitoring-sweep, postmortem, posthog-ux-discovery, mobile-review, factory-retro, red-pr-repair. Every tool name, path and routine name comes from .claude/repo.config.json.",
+  "author": {
+    "name": "xdoubleu"
+  }
+}
