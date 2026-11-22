@@ -41,6 +41,12 @@
       "description": "Status line (model/effort/context%/rate limits/worktree badge) and the compact-idle hygiene hooks: a sound + systemMessage nudge to /compact when idle with high context usage, and a hard block on new prompts past a context threshold until you do.",
       "source": "./plugins/session-hygiene",
       "category": "workflow"
+    },
+    {
+      "name": "task-lifecycle",
+      "description": "Config-driven start-task, finish-task, refine-task and refine-feature for repos whose tasks live on the factory board; every repo specific comes from .claude/repo.config.json.",
+      "source": "./plugins/task-lifecycle",
+      "category": "workflow"
     }
   ]
 }
