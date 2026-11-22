@@ -19,6 +19,7 @@ marketplace, and as a plain skills source by any other agent through the
 /plugin install github-issue-triage@xdoubleu-skills
 /plugin install skill-lifecycle@xdoubleu-skills
 /plugin install session-hygiene@xdoubleu-skills
+/plugin install doc-budgets@xdoubleu-skills
 /plugin install task-lifecycle@xdoubleu-skills
 /plugin install ops-routines@xdoubleu-skills
 ```
@@ -90,12 +91,14 @@ this repo — see `plugins/skill-lifecycle`.
   factory-board tasks. Fully config-driven via `.claude/repo.config.json`
   (gates per area, board tool names, labels, PR wait command); schema in
   `plugins/task-lifecycle/README.md`. Runs offline under `FACTORY_JOB`.
-
 - **ops-routines** — `sentry-triage`, `dependabot-triage`, `monitoring-sweep`,
   `postmortem`, `posthog-ux-discovery`, `mobile-review`, `factory-retro`,
   `red-pr-repair`. Read their MCP tool names, paths and routine names from the
   `ops` block of `.claude/repo.config.json`; keys in
   `plugins/ops-routines/README.md`. A skill whose tools aren't configured stops.
+- **doc-budgets** — per-file line budgets and a dead-path check for docs,
+  configured by `.claude/doc-budgets.json`; `PostToolUse` hook, OpenCode port
+  and CI scripts (tag `doc-budgets-vX.Y.Z`). See `plugins/doc-budgets/README.md`.
 
 ## Project-specific wrappers
 

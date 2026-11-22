@@ -1,0 +1,7 @@
+{
+  "name": "doc-budgets",
+  "description": "Doc-budget check: per-file line budgets and a dead-path check for docs, config-driven via .claude/doc-budgets.json, as a PostToolUse edit hook, an OpenCode port and CI-runnable scripts.",
+  "author": {
+    "name": "xdoubleu"
+  }
+}
