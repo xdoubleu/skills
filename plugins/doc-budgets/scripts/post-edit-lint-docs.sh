@@ -5,7 +5,7 @@ set -uo pipefail
 dir=$(cd "$(dirname "$0")" && pwd)
 file=$(jq -r '.tool_input.file_path // empty' 2>/dev/null)
 [ -n "$file" ] || exit 0
-[ -n "${CLAUDE_PROJECT_DIR:-}" ] && cd "$CLAUDE_PROJECT_DIR"
+if [ -n "${CLAUDE_PROJECT_DIR:-}" ]; then cd "$CLAUDE_PROJECT_DIR" || exit 0; fi
 out=$({ "$dir/lint_docs.sh" "$file"; "$dir/lint_doc_paths.sh" "$file"; } 2>&1 >/dev/null)
 if [ -n "$out" ]; then
   echo "$out" >&2
