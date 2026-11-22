@@ -11,7 +11,7 @@ make docs   # every SKILL.md has frontmatter whose name is its directory, plus a
 make check  # all three
 ```
 
-CI runs them on every PR; `ci-pass` is the required check.
+CI runs them on every PR; `ci-pass` is the required check. `flake.nix` supplies their tools (`nix develop`), and factory jobs run in its dev shell.
 
 ## Adding a plugin
 
