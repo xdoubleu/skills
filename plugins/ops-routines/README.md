@@ -18,7 +18,7 @@ stops.
 | `red-pr-repair` | `redPr.listCommand`, `areas`, `prWaitCommand` | Reproduce and fix failing PRs. |
 
 All also need `repoId` and the `board.*` tools they call (see the
-`task-lifecycle` README). OpenCode: `npx skills add xdoubleu/skills -a opencode --skill sentry-triage --skill dependabot-triage ...`.
+`task-lifecycle` README). OpenCode: `npx skills add xdoubleu/skills -a opencode --skill sentry-triage --skill dependabot-triage --skill monitoring-sweep --skill postmortem --skill posthog-ux-discovery --skill mobile-review --skill factory-retro --skill red-pr-repair`.
 
 ## Added config keys
 
