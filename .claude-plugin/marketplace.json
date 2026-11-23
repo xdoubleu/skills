@@ -53,6 +53,12 @@
       "description": "Config-driven start-task, finish-task, refine-task and refine-feature for repos whose tasks live on the factory board; every repo specific comes from .claude/repo.config.json.",
       "source": "./plugins/task-lifecycle",
       "category": "workflow"
+    },
+    {
+      "name": "ops-routines",
+      "description": "Config-driven ops routines: sentry-triage, dependabot-triage, monitoring-sweep, postmortem, posthog-ux-discovery, mobile-review, factory-retro, red-pr-repair; tool names, paths and routine names come from .claude/repo.config.json.",
+      "source": "./plugins/ops-routines",
+      "category": "workflow"
     }
   ]
 }
